@@ -74,8 +74,8 @@ Train the Model.
 python train_face_data_vid.py --source <Frame-Source> --source-path <Frame-Source-Path>
 ```
 
-- <Frame-Source> has 2 options: `image` and `video`
-- <Frame-Source-Path> can be:
+- `<Frame-Source>` has 2 options: `image` and `video`
+- `<Frame-Source-Path>` can be:
   - Either an Image File Path (for --source image)
   - Folder Path (for both sources)
   - A Video File Path (for --source video)
