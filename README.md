@@ -16,7 +16,7 @@
 - Interactive Menu
 - More Models
 
-#### Step 01:
+### Step 01:
 
 Clone and Enter the Repository
 
@@ -25,7 +25,7 @@ git clone https://github.com/TheProjectsX/opencv-face-detection
 cd opencv-face-detection
 ```
 
-#### Step 02:
+### Step 02:
 
 Create a Python Virtual Environment and Activate it
 
@@ -39,7 +39,7 @@ python -m venv py-venv
 ./py-venv/Scripts/activate
 ```
 
-#### Step 03:
+### Step 03:
 
 Install necessary Packages
 
@@ -66,7 +66,7 @@ For YuNet
 cd YuNet
 ```
 
-#### Step 05:
+### Step 05:
 
 Train the Model.
 
@@ -87,3 +87,28 @@ python train_face_data_vid.py --source <Frame-Source> --source-path <Frame-Sourc
 - `--update` use to Update an Existing person's model
 
 If Model does not exists, will create a New Model
+
+### Step 06:
+
+Detect Faces
+
+```shell script
+python detect_face.py --source <Frame-Source> --source-path <Frame-Source-Path>
+```
+
+- `<Frame-Source>` has 2 options: `image` and `video`
+- `<Frame-Source-Path>` can be:
+  - Either an Image File Path (for --source image)
+  - Folder Path (for both sources)
+  - A Video File Path (for --source video)
+  - Camera Index (for --source video)
+
+### Example:
+
+```shell script
+# Train the Model
+python train_face_data_vid.py --source video --source-path 1
+
+# Detect Faces
+python detect_face.py --source video --source-path 1
+```
